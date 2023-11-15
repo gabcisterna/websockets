@@ -1,0 +1,13 @@
+<div>
+    Mostrar productos:
+    <hr>
+    <ul>
+        {{#each products}}
+        <li>Id: {{this.id}}</li>
+        <li>Titulo: {{this.title}}</li>
+        <li>Precio: {{this.price}}</li>
+        <li>Codigo: {{this.code}}</li>
+        <hr>
+        {{/each}}
+    </ul>
+</div>

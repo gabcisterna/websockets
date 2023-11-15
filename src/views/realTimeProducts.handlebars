@@ -1,0 +1,29 @@
+<div>
+    <P>Productos En tiempo real:</P>
+    <hr>
+
+    
+    <ul id="listaProductos">
+        {{#each products}}
+        <li>Id: {{this.id}}</li>
+        <li>Titulo: {{this.title}}</li>
+        <li>Precio: {{this.price}}</li>
+        <li>Codigo: {{this.code}}</li>
+        <hr>
+        {{/each}}
+    </ul>
+    <form action="/api/products/" method="post" id="agregarProducto">
+        <input type="text" name="title" placeholder="Titulo">
+        <input type="text" name="description" placeholder="Descripcion">
+        <input type="number" name="price" placeholder="Precio">
+        <input type="text" name="thumbnail" placeholder="Thumbnail">
+        <input type="number" name="code" placeholder="Código">
+        <input type="number" name="stock" placeholder="Stock">
+        <input type="text" name="category" placeholder="Categoria">
+
+        <input type="submit">
+    </form>
+</div>
+
+<script src="socket.io/socket.io.js"></script>
+<script src="js/index.js"></script>
